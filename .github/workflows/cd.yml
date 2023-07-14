@@ -16,7 +16,7 @@ jobs:
           uses: pnpm/action-setup@v2
           with:
             version: 6.0.2
-            
+
         - name: Checkout
           uses: actions/checkout@master
 
@@ -26,7 +26,7 @@ jobs:
             node-version: ${{ matrix.node }}
 
         - name: Install dependencies
-          run: pnpm
+          run: pnpm i
 
         - name: Generate
           run: pnpm generate
