@@ -12,23 +12,28 @@ jobs:
         node: [16]
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@master
+        - name: 'pnpm install'
+          uses: pnpm/action-setup@v2
+          with:
+            version: 6.0.2
+            
+        - name: Checkout
+          uses: actions/checkout@master
 
-      - name: Setup node env
-        uses: actions/setup-node@v2.1.2
-        with:
-          node-version: ${{ matrix.node }}
+        - name: Setup node env
+          uses: actions/setup-node@v2.1.2
+          with:
+            node-version: ${{ matrix.node }}
 
-      - name: Install dependencies
-        run: pnpm
+        - name: Install dependencies
+          run: pnpm
 
-      - name: Generate
-        run: pnpm generate
+        - name: Generate
+          run: pnpm generate
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        - name: Deploy
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./dist
 
