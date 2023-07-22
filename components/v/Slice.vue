@@ -9,11 +9,7 @@ defineProps<{ dark?: boolean }>();
 </script>
 <style lang="postcss">
 .v-slice {
-  @apply px-4 py-12;
-
-  @screen md {
-    @apply px-6;
-  }
+  @apply px-4 md:px-6 py-12;
 
   &--dark {
     @apply bg-brand-200;
