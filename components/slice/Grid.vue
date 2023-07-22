@@ -43,5 +43,5 @@ const items = [
       "Aute nostrud Lorem consequat sit esse ipsum incididunt in qui aute.",
   },
 ];
-defineProps<{ items: GridItem[] }>();
+// defineProps<{ items: GridItem[] }>();
 </script>
