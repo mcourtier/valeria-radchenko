@@ -1,19 +1,18 @@
 <template>
-    <button class="v-button">
-        <slot />
-    </button>
+  <button class="v-button">
+    <slot />
+  </button>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 <style lang="postcss">
 .v-button {
-    @apply bg-brand-800 text-brand-50;
-    @apply block w-full font-semibold py-3 px-5 rounded-full;
-    @apply transition outline-none select-none;
+  @apply bg-brand-800 text-brand-50;
+  @apply block w-full font-semibold py-3 px-5 rounded-full;
+  @apply transition outline-none select-none;
 
-    &:active {
-        @apply bg-brand-900;
-    }
+  &:active {
+    @apply bg-brand-900;
+  }
 }
 </style>

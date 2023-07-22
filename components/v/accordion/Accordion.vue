@@ -1,11 +1,11 @@
 <template>
-    <div class="v-accordion">
-        <VAccordionItem v-for="item in items" :item="item" />
-    </div>
+  <div class="v-accordion">
+    <VAccordionItem v-for="item in items" :item="item" />
+  </div>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-    items: Record<string, string>[],
+  items: Record<string, string>[];
 }>();
 </script>
