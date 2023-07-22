@@ -1,8 +1,9 @@
 <template>
   <SliceHero />
   <SliceList dark />
-  <SliceAccordion />
-  <SliceCarousel dark />
+  <SliceGrid />
+  <SliceAccordion dark />
+  <SliceCarousel />
 </template>
 
 <script setup></script>

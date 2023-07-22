@@ -1,7 +1,14 @@
 <template>
   <VSlice>
     <VCarousel :items="items">
-      <template name="item"> </template>
+      <template #item="{ item }">
+        <div
+          class="p-4 bg-brand-50 border border-brand-400 rounded-lg mx-2 h-full"
+        >
+          <div class="font-bold mb-3">{{ item.title }}</div>
+          <p>{{ item.content }}</p>
+        </div>
+      </template>
     </VCarousel>
   </VSlice>
 </template>

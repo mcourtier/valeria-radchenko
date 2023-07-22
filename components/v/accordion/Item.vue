@@ -5,7 +5,7 @@
       <img
         class="w-8"
         src="/assets/svg/plus.svg"
-        :class="{ 'rotate-90': open }"
+        :class="{ '-rotate-45': open }"
       />
     </label>
     <div :class="{ hidden: !open }">
@@ -32,7 +32,7 @@ defineProps<{
     @apply text-brand-600 font-bold;
 
     img {
-      @apply transform transition mr-2 select-none;
+      @apply transform transition duration-500 ease-out mr-2 select-none;
     }
   }
 
