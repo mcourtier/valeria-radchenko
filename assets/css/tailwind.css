@@ -14,6 +14,13 @@
 body {
     font-family: Montserrat, sans-serif;
     @apply bg-brand-100 text-brand-800;
+    overflow: hidden;
+}
+
+#__nuxt {
+    height: 100vh;;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .font-title {

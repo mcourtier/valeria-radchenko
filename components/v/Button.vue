@@ -1,15 +1,19 @@
 <template>
-    <button :class="classes">
+    <button class="v-button">
         <slot />
     </button>
 </template>
 
 <script setup>
-
-const classes = [
-    'bg-brand-800 text-brand-50',
-    'py-2 px-3',
-    'rounded-full',
-    'outline:none',
-]
 </script>
+<style lang="postcss">
+.v-button {
+    @apply bg-brand-800 text-brand-50;
+    @apply block w-full font-semibold py-3 px-5 rounded-full;
+    @apply transition outline-none select-none;
+
+    &:active {
+        @apply bg-brand-900;
+    }
+}
+</style>

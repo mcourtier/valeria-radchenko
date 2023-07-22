@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div class="v-accordion__item">
         <label @click="open = !open">
-            <img src="/assets/svg/chevron-right.svg" :class="{ 'rotate-90': open }" />
             {{ item.title }}
+            <img class="w-8" src="/assets/svg/plus.svg" :class="{ 'rotate-90': open }" />
         </label>
-        <div class="pb-4" :class="{ hidden: !open }">
+        <div :class="{ hidden: !open }">
             {{ item.content }}
         </div>
     </div>
@@ -20,13 +20,20 @@ defineProps<{
 </script>
 
 <style lang="postcss">
-.v-accordion {
+.v-accordion__item {
+    @apply bg-gray-50 mb-1 rounded-3xl;
+
     label {
-        @apply flex font-bold py-1 cursor-pointer;
+        @apply flex items-center justify-between font-bold p-4 cursor-pointer;
+        @apply text-brand-600 font-bold;
 
         img {
-            @apply transform transition;
+            @apply transform transition mr-2 select-none;
         }
+    }
+
+    >div {
+        @apply px-4 pb-4 text-sm;
     }
 }
 </style>

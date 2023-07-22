@@ -1,8 +1,9 @@
 <template>
-    <section class="p-4 md:p-6 text-center">
+    <VSlice>
         <h2 class="font-title text-xl font-bold mb-4"></h2>
-        <p class="text-lg">Veniam magna proident ipsum aute ipsum sit. Mollit ut officia aute fugiat Lorem enim quis aliquip velit duis irure anim aliquip.</p>
-        <div>
+        <p class="">Veniam magna proident ipsum aute ipsum sit. Mollit ut officia aute fugiat Lorem enim quis aliquip velit
+            duis irure anim aliquip.</p>
+        <div class="mt-4">
             <VButton>Sign Up</VButton>
         </div>
         <ul class="list mt-8">
@@ -28,7 +29,7 @@
                 <div class="list-circle"></div> Lorem ipsum
             </li>
         </ul>
-    </section>
+    </VSlice>
 </template>
 <style lang="postcss">
 .list-circle {
