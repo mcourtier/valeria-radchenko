@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       meta: [
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]
-    }
+    },
+    baseURL: "/valeria/"
   }
 })
