@@ -48,17 +48,17 @@ export default defineNuxtConfig({
       theme_color: '#ffffff',
       icons: [
         {
-          src: '/vr-256.jpg',
+          src: 'vr-256.jpg',
           sizes: '192x192',
           type: 'image/jpg',
         },
         {
-          src: '/vr-512.jpg',
+          src: 'vr-512.jpg',
           sizes: '512x512',
           type: 'image/jpg',
         },
         {
-          src: '/vr-512.jpg',
+          src: 'vr-512.jpg',
           sizes: '512x512',
           type: 'image/jpg',
           purpose: 'any maskable',
