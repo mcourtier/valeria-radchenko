@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/prismic'],
+
   app: {
     head: {
       title: 'English lessons | Valeria Radchenko',
@@ -14,5 +15,9 @@ export default defineNuxtConfig({
       ]
     },
     baseURL: "/valeria/"
+  },
+
+  prismic: {
+    endpoint: 'mc-dev'
   }
 })
