@@ -3,7 +3,7 @@
     <div>
       <img
         src="/vr-384.jpg"
-        class="w-64 h-64 rounded-full overflow-hidden mb-8"
+        class="w-64 h-64 mx-auto rounded-full overflow-hidden mb-8"
         alt="Valeria Radchenko"
       />
     </div>
