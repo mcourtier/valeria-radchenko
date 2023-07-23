@@ -72,7 +72,7 @@ const clearListeners = () => {
 
   > div {
     @apply overflow-hidden px-4 text-sm;
-    transition: height 1s ease;
+    transition: height 0.5s ease;
   }
 }
 </style>
