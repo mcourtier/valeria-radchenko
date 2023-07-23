@@ -1,7 +1,12 @@
+import svgLoader from 'vite-svg-loader'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/prismic'],
+  modules: [
+    '@nuxtjs/tailwindcss', 
+    '@nuxtjs/prismic',
+  ],
 
   app: {
     head: {
@@ -19,5 +24,10 @@ export default defineNuxtConfig({
 
   prismic: {
     endpoint: 'mc-dev'
+  },
+
+  vite: {
+    plugins: [svgLoader()]
   }
+
 })
