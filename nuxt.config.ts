@@ -24,6 +24,11 @@ export default defineNuxtConfig({
     baseURL: "/valeria/"
   },
 
+  static: {
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  },
+
+
   prismic: {
     endpoint: 'mc-dev'
   },
