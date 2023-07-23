@@ -40,19 +40,19 @@ export default defineNuxtConfig({
       theme_color: '#ffffff',
       icons: [
         {
-          src: 'pwa-192x192.png',
+          src: '/vr-256.jpg',
           sizes: '192x192',
-          type: 'image/png',
+          type: 'image/jpg',
         },
         {
-          src: 'pwa-512x512.png',
+          src: '/vr-512.jpg',
           sizes: '512x512',
-          type: 'image/png',
+          type: 'image/jpg',
         },
         {
-          src: 'pwa-512x512.png',
+          src: '/vr-512.jpg',
           sizes: '512x512',
-          type: 'image/png',
+          type: 'image/jpg',
           purpose: 'any maskable',
         },
       ],
