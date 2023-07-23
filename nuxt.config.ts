@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss', 
     '@nuxtjs/prismic',
+    '@vite-pwa/nuxt',
   ],
 
   app: {
