@@ -19,7 +19,10 @@ export default defineNuxtConfig({
         { hid: 'googlebot', name: 'googlebot', content: 'noindex' },
         { hid: 'description', name: 'description', content: 'Veniam magna proident ipsum aute ipsum sit. Mollit ut officia aute fugiat Lorem enim quis aliquip velit duis irure anim aliquip.' },
         { hid: 'theme-color', name: 'theme-color', content: '#F0E8DD' }
-      ]
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      ]  
     },
     baseURL: "/valeria/"
   },
