@@ -1,26 +1,61 @@
 <template>
   <div class="v-accordion__item">
-    <label @click="open = !open">
+    <label @click="toggle">
       {{ item.title }}
       <img
         class="w-8"
         src="/assets/svg/plus.svg"
-        :class="{ '-rotate-45': open }"
+        :class="{ '-rotate-45': isOpen }"
       />
     </label>
-    <div :class="{ hidden: !open }">
-      {{ item.content }}
+    <div :style="{ height }" ref="content">
+      <p class="pb-16">{{ item.content }}</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, nextTick } from "vue";
 
-const open = ref(false);
 defineProps<{
   item: Record<string, string>;
 }>();
+
+const isOpen = ref(false);
+const content: Ref<HTMLElement | null> = ref(null);
+const height = ref("0");
+
+const toggle = () => (!isOpen.value ? open() : close());
+const open = () => {
+  clearListeners();
+  isOpen.value = true;
+  console.log("open");
+  nextTick(() => {
+    height.value = content.value?.scrollHeight + "px";
+    content.value?.addEventListener("transitionend", onOpenEnd);
+  });
+};
+const close = () => {
+  clearListeners();
+  height.value =
+    height.value !== "auto" ? height.value : `${content.value?.scrollHeight}px`;
+  setTimeout(() => {
+    isOpen.value = false;
+    height.value = "0";
+    content.value?.addEventListener("transitionend", onCloseEnd);
+  }, 100);
+};
+const onOpenEnd = () => {
+  height.value = "auto";
+  clearListeners();
+};
+const onCloseEnd = () => {
+  clearListeners();
+};
+const clearListeners = () => {
+  content.value?.removeEventListener("transitionend", onOpenEnd);
+  content.value?.removeEventListener("transitionend", onCloseEnd);
+};
 </script>
 
 <style lang="postcss">
@@ -37,7 +72,8 @@ defineProps<{
   }
 
   > div {
-    @apply px-4 pb-4 text-sm;
+    @apply overflow-hidden px-4 text-sm;
+    transition: height 1s ease;
   }
 }
 </style>
