@@ -3,7 +3,7 @@
     <label @click="toggle">
       {{ item.title }}
       <img
-        class="w-8"
+        class="w-8 h-8"
         src="/assets/svg/plus.svg"
         :class="{ '-rotate-45': isOpen }"
       />
