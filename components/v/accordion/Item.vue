@@ -9,7 +9,7 @@
       />
     </label>
     <div :style="{ height }" ref="content">
-      <p class="pb-16">{{ item.content }}</p>
+      <p class="pb-4">{{ item.content }}</p>
     </div>
   </div>
 </template>
@@ -29,7 +29,6 @@ const toggle = () => (!isOpen.value ? open() : close());
 const open = () => {
   clearListeners();
   isOpen.value = true;
-  console.log("open");
   nextTick(() => {
     height.value = content.value?.scrollHeight + "px";
     content.value?.addEventListener("transitionend", onOpenEnd);
@@ -43,7 +42,7 @@ const close = () => {
     isOpen.value = false;
     height.value = "0";
     content.value?.addEventListener("transitionend", onCloseEnd);
-  }, 100);
+  }, 10);
 };
 const onOpenEnd = () => {
   height.value = "auto";
