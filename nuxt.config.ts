@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
       ]  
     },
-    baseURL: "/valeria/"
+    // baseURL: "/valeria/"
   },
 
   // static: {
