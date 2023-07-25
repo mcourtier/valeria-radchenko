@@ -19,9 +19,9 @@
     "@nuxt/devtools": "latest",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
-    "@nuxtjs/prismic": "^3.0.0",
+    "@nuxtjs/prismic": "^3.0.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@slicemachine/adapter-nuxt": "^0.3.6",
+    "@slicemachine/adapter-nuxt": "^0.3.7",
     "@types/node": "^18.16.19",
     "@typescript-eslint/parser": "^6.1.0",
     "@vite-pwa/nuxt": "^0.1.0",
@@ -34,7 +34,7 @@
     "postcss-nested": "^6.0.1",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "slice-machine-ui": "^1.5.3",
+    "slice-machine-ui": "^1.6.0",
     "typescript": "^5.1.6",
     "vite-svg-loader": "^4.0.0"
   }

@@ -18,14 +18,14 @@ devDependencies:
     specifier: ^12.0.0
     version: 12.0.0(eslint@8.45.0)(typescript@5.1.6)
   '@nuxtjs/prismic':
-    specifier: ^3.0.0
+    specifier: ^3.0.1
     version: 3.0.1(rollup@2.79.1)(vue@3.3.4)
   '@nuxtjs/tailwindcss':
     specifier: ^6.8.0
     version: 6.8.0(rollup@2.79.1)(webpack@5.88.1)
   '@slicemachine/adapter-nuxt':
-    specifier: ^0.3.6
-    version: 0.3.6(nuxt@3.6.2)
+    specifier: ^0.3.7
+    version: 0.3.7(nuxt@3.6.2)
   '@types/node':
     specifier: ^18.16.19
     version: 18.16.19
@@ -63,8 +63,8 @@ devDependencies:
     specifier: ^0.4.1
     version: 0.4.1(prettier@3.0.0)
   slice-machine-ui:
-    specifier: ^1.5.3
-    version: 1.5.3(typescript@5.1.6)
+    specifier: ^1.6.0
+    version: 1.6.0(typescript@5.1.6)
   typescript:
     specifier: ^5.1.6
     version: 5.1.6
@@ -2870,15 +2870,15 @@ packages:
       - supports-color
     dev: true
 
-  /@slicemachine/adapter-nuxt@0.3.6(nuxt@3.6.2):
-    resolution: {integrity: sha512-eZqW9ROuNyz2eErYHguNnl5Rys43OVZ9IH4rzWQz7CKM/3a+vPSkevINt1JlvPIaFFKFAqOJ1fLG+8DCAqQ9sw==}
+  /@slicemachine/adapter-nuxt@0.3.7(nuxt@3.6.2):
+    resolution: {integrity: sha512-DqogzSWehxdbeaGSWjQskYd27e7SIR2cd5rbhuj8lzZzger+4BqEBV6ple/n9XQSB62RuXrRC1uJtXltHOX4Xg==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       nuxt: ^3.0.0
     dependencies:
       '@prismicio/simulator': 0.1.4
       '@prismicio/types-internal': 2.0.0(fp-ts@2.16.0)(io-ts-types@0.5.19)(io-ts@2.2.20)
-      '@slicemachine/plugin-kit': 0.4.6
+      '@slicemachine/plugin-kit': 0.4.7
       common-tags: 1.8.2
       fp-ts: 2.16.0
       fs-extra: 11.1.1
@@ -2896,8 +2896,8 @@ packages:
       - '@prismicio/types'
     dev: true
 
-  /@slicemachine/manager@0.7.1(puppeteer@19.11.1):
-    resolution: {integrity: sha512-TZBCMfPVWShf7ZKeZer7SSc+//Z3FAcTnBTJYBMks2WXZ+M3wnQAWW8VjjVBP7b5wq0fOfnnoyQgF+LTlMB/lA==}
+  /@slicemachine/manager@0.8.0(puppeteer@19.11.1):
+    resolution: {integrity: sha512-U6m6CfcIGlzOY2CacWE9xKDyH/H9EGiK4MLub79JZ1Ix8H7MJHGAxptmEnk02/RNdUYSL3tl96dYDN41v4P0jQ==}
     engines: {node: '>=14.15.0'}
     peerDependencies:
       msw: ^1.1.0
@@ -2912,7 +2912,7 @@ packages:
       '@prismicio/custom-types-client': 1.2.0-alpha.0
       '@prismicio/mocks': 2.0.0-alpha.2
       '@prismicio/types-internal': 2.0.0(fp-ts@2.16.0)(io-ts-types@0.5.19)(io-ts@2.2.20)
-      '@slicemachine/plugin-kit': 0.4.6
+      '@slicemachine/plugin-kit': 0.4.7
       '@wooorm/starry-night': 1.7.0
       analytics-node: 6.2.0
       cookie: 0.5.0
@@ -2945,8 +2945,8 @@ packages:
       - supports-color
     dev: true
 
-  /@slicemachine/plugin-kit@0.4.6:
-    resolution: {integrity: sha512-9eHtTFh/v1e0GzVSXASHnshuAQZWHB4oeMn/8/CDWE8TVwLyC+Tew6KlxGFvfXwe5iq6I171daTCyojhxheK+Q==}
+  /@slicemachine/plugin-kit@0.4.7:
+    resolution: {integrity: sha512-lKL7dTEFwes/s049e54LWJ4A53+nc/gAO7BTQqLV6U0gtULoTc+kjXq22R7kKuCjBNjGDCt0fhmLe1KIHI/Vcw==}
     engines: {node: '>=14.15.0'}
     dependencies:
       common-tags: 1.8.2
@@ -10181,7 +10181,7 @@ packages:
     dependencies:
       '@prismicio/custom-types-client': 1.1.0
       common-tags: 1.8.2
-      fast-glob: 3.3.0
+      fast-glob: 3.3.1
       jiti: 1.19.1
       joi: 17.9.2
       meow: 12.0.1
@@ -10978,14 +10978,14 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /slice-machine-ui@1.5.3(typescript@5.1.6):
-    resolution: {integrity: sha512-LY0sfw1rPXtL1l3VvF7vRdxME+jdOd9lc84Z8y0eHBkJlJdbUoFjDRGAWhUfFG6ibm5Pjf/iFAGzBSRiJpCbig==}
+  /slice-machine-ui@1.6.0(typescript@5.1.6):
+    resolution: {integrity: sha512-A1+YYI5pylztPF1190Wc42sUjFPhENF6XBiSnDW4jnWJ8P8ZNdhiQLLalNKwR8NI/F/T/pawL+rO1sMwn3c4Wg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
-      '@slicemachine/manager': 0.7.1(puppeteer@19.11.1)
+      '@slicemachine/manager': 0.8.0(puppeteer@19.11.1)
       puppeteer: 19.11.1(typescript@5.1.6)
-      start-slicemachine: 0.9.6(puppeteer@19.11.1)
+      start-slicemachine: 0.9.7(puppeteer@19.11.1)
     transitivePeerDependencies:
       - '@types/express'
       - bufferutil
@@ -11096,14 +11096,14 @@ packages:
     resolution: {integrity: sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A==}
     dev: true
 
-  /start-slicemachine@0.9.6(puppeteer@19.11.1):
-    resolution: {integrity: sha512-hvYQsYaXEcxxOLFdFALLRphsTUq2qUCOqLjMCvX7EKDIfxQvVZdNsXDVgxMfIXoyYEvKKdmN97ipuZ2+WNlOgg==}
+  /start-slicemachine@0.9.7(puppeteer@19.11.1):
+    resolution: {integrity: sha512-EM8T8hASZMyIPo/KrlstEvug8aYhH1MBHDOtzeAJ3dNYbwIlt+tnRUJFJzdU3KFp3ENqCSIf6Kz/ARQO7glhdw==}
     engines: {node: '>=14.15.0'}
     hasBin: true
     dependencies:
       '@prismicio/mocks': 2.0.0-alpha.2
       '@prismicio/types-internal': 2.0.0(fp-ts@2.16.0)(io-ts-types@0.5.19)(io-ts@2.2.20)
-      '@slicemachine/manager': 0.7.1(puppeteer@19.11.1)
+      '@slicemachine/manager': 0.8.0(puppeteer@19.11.1)
       body-parser: 1.20.2
       chalk: 4.1.2
       cors: 2.8.5
