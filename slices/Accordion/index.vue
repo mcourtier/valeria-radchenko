@@ -25,7 +25,7 @@ const props = defineProps(
 const items = ref(
   props.slice.items.map((item) => ({
     title: item.title,
-    content: item.text.text,
+    content: item.text,
   }))
 );
 </script>

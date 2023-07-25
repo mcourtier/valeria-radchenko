@@ -15,6 +15,9 @@ useHead({
     },
   ],
 });
+
+// TODO : remove this CSR force reload
+refreshNuxtData();
 </script>
 
 <template>
