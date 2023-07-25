@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type HomepageDocumentDataSlicesSlice = HeroSlice;
+type HomepageDocumentDataSlicesSlice =
+  | HeroSlice
+  | AccordionSlice
+  | CarouselSlice;
 
 /**
  * Content for Homepage documents
@@ -84,9 +87,139 @@ export type HomepageDocument<Lang extends string = string> =
 export type AllDocumentTypes = HomepageDocument;
 
 /**
+ * Primary content in *Accordion → Items*
+ */
+export interface AccordionSliceDefaultItem {
+  /**
+   * title field in *Accordion → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordion.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *Accordion → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: accordion.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Accordion Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AccordionSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<AccordionSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Accordion*
+ */
+type AccordionSliceVariation = AccordionSliceDefault;
+
+/**
+ * Accordion Shared Slice
+ *
+ * - **API ID**: `accordion`
+ * - **Description**: Accordion
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AccordionSlice = prismic.SharedSlice<
+  "accordion",
+  AccordionSliceVariation
+>;
+
+/**
+ * Primary content in *Testimonials → Items*
+ */
+export interface CarouselSliceDefaultItem {
+  /**
+   * image field in *Testimonials → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.items[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * author field in *Testimonials → Items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.items[].author
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
+
+  /**
+   * text field in *Testimonials → Items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: carousel.items[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
+ * Default variation for Testimonials Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  Simplify<CarouselSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Testimonials*
+ */
+type CarouselSliceVariation = CarouselSliceDefault;
+
+/**
+ * Testimonials Shared Slice
+ *
+ * - **API ID**: `carousel`
+ * - **Description**: Carousel
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CarouselSlice = prismic.SharedSlice<
+  "carousel",
+  CarouselSliceVariation
+>;
+
+/**
  * Primary content in *Hero → Primary*
  */
 export interface HeroSliceDefaultPrimary {
+  /**
+   * image field in *Hero → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
   /**
    * title field in *Hero → Primary*
    *
@@ -96,6 +229,26 @@ export interface HeroSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
+
+  /**
+   * subtitle field in *Hero → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.subtitle
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  subtitle: prismic.KeyTextField;
+
+  /**
+   * text field in *Hero → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
 }
 
 /**
@@ -138,6 +291,12 @@ declare module "@prismicio/client" {
       HomepageDocument,
       HomepageDocumentData,
       AllDocumentTypes,
+      AccordionSlice,
+      AccordionSliceVariation,
+      AccordionSliceDefault,
+      CarouselSlice,
+      CarouselSliceVariation,
+      CarouselSliceDefault,
       HeroSlice,
       HeroSliceVariation,
       HeroSliceDefault,

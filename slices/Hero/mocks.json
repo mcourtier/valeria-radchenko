@@ -7,6 +7,43 @@
 				"__TYPE__": "FieldContent",
 				"value": "value",
 				"type": "Text"
+			},
+			"image": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+					"width": 3277,
+					"height": 4092
+				},
+				"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+				"width": 3277,
+				"height": 4092,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			},
+			"subtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "pupil",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Esse ullamco laboris et in duis. Irure nisi ut tempor ex velit aute do nostrud mollit esse. Deserunt voluptate id dolore fugiat eiusmod aute non ullamco aute culpa."
+						}
+					}
+				]
 			}
 		},
 		"items": []

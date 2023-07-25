@@ -1,0 +1,36 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"title",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "these",
+							"type": "Text"
+						}
+					],
+					[
+						"text",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Excepteur Lorem cupidatat sunt sint ea incididunt aute. Laborum commodo ut cillum do pariatur sint nulla aute eu proident."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	}
+]

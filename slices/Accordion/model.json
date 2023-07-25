@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "accordion",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "Accordion",
+  "description": "Accordion",
   "variations": [
     {
       "id": "default",
@@ -11,18 +11,11 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {
-        "image": {
-          "type": "Image",
-          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
-        },
+      "primary": {},
+      "items": {
         "title": {
           "type": "Text",
           "config": { "label": "title", "placeholder": "" }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": { "label": "subtitle", "placeholder": "" }
         },
         "text": {
           "type": "StructuredText",
@@ -33,8 +26,7 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }

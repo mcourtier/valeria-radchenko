@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "carousel",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "Testimonials",
+  "description": "Carousel",
   "variations": [
     {
       "id": "default",
@@ -11,18 +11,15 @@
       "version": "initial",
       "description": "Default",
       "imageUrl": "",
-      "primary": {
+      "primary": {},
+      "items": {
         "image": {
           "type": "Image",
           "config": { "label": "image", "constraint": {}, "thumbnails": [] }
         },
-        "title": {
+        "author": {
           "type": "Text",
-          "config": { "label": "title", "placeholder": "" }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": { "label": "subtitle", "placeholder": "" }
+          "config": { "label": "author", "placeholder": "" }
         },
         "text": {
           "type": "StructuredText",
@@ -33,8 +30,7 @@
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }
