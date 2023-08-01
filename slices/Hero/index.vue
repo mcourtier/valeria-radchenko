@@ -7,15 +7,15 @@
     <div>
       <PrismicImage
         :field="slice.primary.image"
-        class="w-64 h-64 mx-auto rounded-full overflow-hidden mb-8"
+        class="w-56 h-56 mx-auto rounded-full overflow-hidden mb-4"
       />
     </div>
-    <h1 class="font-title text-6xl font-bold mb-4">
+    <h1 class="font-title text-4xl font-bold mb-2">
       {{ slice.primary.title }}
     </h1>
-    <h2 class="text-xl font-bold mb-8">{{ slice.primary.subtitle }}</h2>
+    <h2 class="text-xl mb-8">{{ slice.primary.subtitle }}</h2>
     <PrismicRichText :field="slice.primary.text" class="mb-4" />
-    <pre class="text-left text-xs">{{ slice.primary }}</pre>
+    <!-- <pre class="text-left text-xs">{{ slice.primary }}</pre> -->
   </VSlice>
 </template>
 
