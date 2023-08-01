@@ -1,0 +1,1 @@
+import{j as s,o as a,c as o,a as n,n as t,C as c}from"./entry.0bb3efb5.js";const r={class:"v-container"},p=s({__name:"Slice",props:{dark:{type:Boolean}},setup(l){return(e,_)=>(a(),o("section",{class:c(["v-slice",{"v-slice--dark":e.dark}])},[n("div",r,[t(e.$slots,"default")])],2))}});export{p as _};
