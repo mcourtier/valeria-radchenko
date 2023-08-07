@@ -7,7 +7,8 @@ type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 type HomepageDocumentDataSlicesSlice =
   | HeroSlice
   | AccordionSlice
-  | CarouselSlice;
+  | CarouselSlice
+  | AdvertSlice;
 
 /**
  * Content for Homepage documents
@@ -140,6 +141,78 @@ export type AccordionSlice = prismic.SharedSlice<
   "accordion",
   AccordionSliceVariation
 >;
+
+/**
+ * Primary content in *Advert → Primary*
+ */
+export interface AdvertSliceDefaultPrimary {
+  /**
+   * title field in *Advert → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advert.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * text field in *Advert → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advert.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Button link field in *Advert → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advert.primary.buttonLink
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  buttonLink: prismic.LinkField;
+
+  /**
+   * Button label field in *Advert → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: advert.primary.buttonLabel
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  buttonLabel: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Advert Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AdvertSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AdvertSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Advert*
+ */
+type AdvertSliceVariation = AdvertSliceDefault;
+
+/**
+ * Advert Shared Slice
+ *
+ * - **API ID**: `advert`
+ * - **Description**: Advert
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AdvertSlice = prismic.SharedSlice<"advert", AdvertSliceVariation>;
 
 /**
  * Primary content in *Testimonials → Items*
@@ -294,6 +367,9 @@ declare module "@prismicio/client" {
       AccordionSlice,
       AccordionSliceVariation,
       AccordionSliceDefault,
+      AdvertSlice,
+      AdvertSliceVariation,
+      AdvertSliceDefault,
       CarouselSlice,
       CarouselSliceVariation,
       CarouselSliceDefault,

@@ -1,10 +1,15 @@
 <template>
-  <button class="v-button">
+  <component :is="component" class="v-button" v-bind="attrs">
     <slot />
-  </button>
+  </component>
 </template>
 
-<script setup></script>
+<script setup lang="ts">
+const props = defineProps<{ href: string; target: string }>();
+const { href, target } = props;
+const component = href ? "a" : "button";
+const attrs = href ? { href, target } : {};
+</script>
 <style lang="postcss">
 .v-button {
   @apply bg-brand-800 active:bg-brand-900 text-brand-50;

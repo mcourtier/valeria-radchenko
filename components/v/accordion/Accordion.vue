@@ -6,6 +6,6 @@
 
 <script setup lang="ts">
 defineProps<{
-  items: Record<string, string>[];
+  items: Record<string, any>[];
 }>();
 </script>

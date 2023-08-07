@@ -9,7 +9,7 @@
       />
     </label>
     <div :style="{ height }" ref="content">
-      <p class="pb-4">{{ item.content }}</p>
+      <PrismicRichText :field="item.content" class="pb-4"></PrismicRichText>
     </div>
   </div>
 </template>
@@ -18,7 +18,7 @@
 import { ref, nextTick } from "vue";
 
 defineProps<{
-  item: Record<string, string>;
+  item: Record<string, any>;
 }>();
 
 const isOpen = ref(false);

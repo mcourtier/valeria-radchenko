@@ -9,7 +9,6 @@
 				"type": "Text"
 			},
 			"image": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
@@ -27,6 +26,9 @@
 					},
 					"background": "transparent"
 				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
 			"subtitle": {
@@ -40,7 +42,7 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Esse ullamco laboris et in duis. Irure nisi ut tempor ex velit aute do nostrud mollit esse. Deserunt voluptate id dolore fugiat eiusmod aute non ullamco aute culpa."
+							"text": "Consectetur aliqua esse anim qui nulla dolor ad minim eu excepteur laborum voluptate aute esse. Lorem veniam voluptate amet laborum cillum tempor qui in cillum mollit nulla consectetur nisi eiusmod sint."
 						}
 					}
 				]

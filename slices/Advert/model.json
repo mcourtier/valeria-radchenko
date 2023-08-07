@@ -1,8 +1,8 @@
 {
-  "id": "hero",
+  "id": "advert",
   "type": "SharedSlice",
-  "name": "Hero",
-  "description": "Hero",
+  "name": "Advert",
+  "description": "Advert",
   "variations": [
     {
       "id": "default",
@@ -12,17 +12,9 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
-          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
-        },
         "title": {
           "type": "Text",
           "config": { "label": "title", "placeholder": "" }
-        },
-        "subtitle": {
-          "type": "Text",
-          "config": { "label": "subtitle", "placeholder": "" }
         },
         "text": {
           "type": "StructuredText",
@@ -30,8 +22,21 @@
             "label": "text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,strong,em,hyperlink,list-item"
+            "multi": "paragraph,em,embed,list-item,strong"
           }
+        },
+        "buttonLink": {
+          "type": "Link",
+          "config": {
+            "label": "Button link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "buttonLabel": {
+          "type": "Text",
+          "config": { "label": "Button label", "placeholder": "" }
         }
       },
       "items": {}
